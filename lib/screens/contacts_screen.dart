@@ -41,8 +41,16 @@ class _ContactsScreenState extends State<ContactsScreen> {
           return ListView.builder(
             itemCount: _contacts.length,
             itemBuilder: (BuildContext context, int index) {
-              return ListTile(
-                title: Text(_contacts[index].name),
+              return GestureDetector(
+                onTap: () {
+                  // TODO: open contact edit form
+                },
+                child: Card(
+                  child: ListTile(
+                    title: Text(_contacts[index].name),
+                    subtitle: Text(_contacts[index].number),
+                  ),
+                ),
               );
             },
           );
