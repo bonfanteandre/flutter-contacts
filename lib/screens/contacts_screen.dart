@@ -22,7 +22,9 @@ class _ContactsScreenState extends State<ContactsScreen> {
         onPressed: () {
           Navigator.of(context).push(
             MaterialPageRoute(builder: (_) => CreateContactScreen())
-          );
+          ).then((value) {
+            setState(() { });
+          });
         },
         child: const Icon(Icons.add),
       ),
